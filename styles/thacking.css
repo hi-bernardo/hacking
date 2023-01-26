@@ -1,0 +1,38 @@
+h2 {
+  color: #77ffc0;
+  font-size: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: "Press Start 2P", Arial, sans-serif;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  line-height: 26px;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transform-origin: 0 100%;
+}
+
+h2:hover,
+h2:focus,
+h2:active {
+  -webkit-transform: skew(-15deg);
+  transform: skew(-15deg);
+}
+#fish {
+  color: #77ffc0;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+#fish:hover,
+#fish:focus,
+#fish:active {
+  color: #fff;
+  transform: scale(0.9);
+}

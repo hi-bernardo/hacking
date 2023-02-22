@@ -23,11 +23,7 @@ h2:active {
 #fish {
   color: #77ffc0;
   font-weight: bold;
-  display: inline-block;
-  vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
   transition-duration: 0.3s;
-  transition-property: transform;
 }
 
 #fish:hover,

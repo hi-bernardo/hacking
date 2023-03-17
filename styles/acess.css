@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #181421;
+  text-align: center;
+  font-family: "Ubuntu";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+section {
+  margin: 30vh 20vh;
+}
+
+.alert {
+  width: 65vw;
+  background-color: #0e0b13;
+  padding: 6vh 4vh;
+  border-radius: 15px;
+  border: 2px solid #77ffc0;
+  box-shadow: 30px 30px 25px rgba(0, 0, 0, 0.5);
+}
+
+.texto {
+  margin: 6vh 0;
+}
+
+h1 {
+  color: rgb(201, 207, 29);
+  font-weight: normal;
+  font-size: 32px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+p {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+button.btn {
+  color: #0a2b1b;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 4px;
+  transition-duration: 0.3s;
+  background: #77ffc0;
+  font-weight: bolder;
+}
+
+button.btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

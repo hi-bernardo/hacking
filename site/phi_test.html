@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/phi_test.css" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>PHISHING</title>
+  </head>
+
+  <body>
+    <section class="arealogin">
+      <div class="login">
+        <div>
+          <img
+            class="img"
+            src="../imgs/imagerandom.png"
+            alt="Você sabia?"
+          />
+        </div>
+        <form method="post" action="access.html" autocomplete="off">
+          <input
+            type="text"
+            name="usuario"
+            placeholder="Usuário"
+            autofocus
+            id="user"
+            required
+          />
+          <input
+            type="password"
+            name="senha"
+            placeholder="Senha"
+            id="pass"
+            required
+          />
+
+          <input
+            type="button"
+            class="phi"
+            value="Recolher dados"
+          />
+
+          <input class="submit" type="submit" value="Enviar" href="access.html"/>
+        </form>
+        <p>
+          Esqueceu a senha? <a class="erro" href="forgetpass.html">Recuperar</a>
+        </p>
+      </div>
+    </section>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

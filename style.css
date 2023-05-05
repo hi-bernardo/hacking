@@ -43,63 +43,55 @@ body::-webkit-scrollbar-thumb {
   border: 9px solid rgb(87, 85, 85);
   background: rgb(86, 85, 85);
 }
-nav {
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: var(--nav-background);
   height: 8vh;
   width: 100%;
 }
 
-label.logo a {
+header label.logo a {
+  margin-inline: 80px;
   cursor: pointer;
   color: var(--menu-tittle-color);
   font-size: 30px;
-  line-height: 9vh;
-  margin: 0 80px;
   text-transform: uppercase;
   font-family: "Press Start 2P";
   display: inline-block;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-label.logo a:hover,
-label.logo a:focus,
-label.logo a:active {
+header label.logo a:hover,
+header label.logo a:focus,
+header label.logo a:active {
   transform: scale(0.9);
 }
 
-nav ul {
+nav {
   float: right;
-  margin-right: 20px;
+  margin-inline: 20px;
 }
 
 nav ul li {
-  display: inline-block;
-  line-height: 8vh;
-  margin: 0 2px;
+  display: inline-flex;
+  margin-inline: 5px;
 }
+
+/* ANIMAÇÃO DO MENU */
 
 nav ul li a {
   position: relative;
   color: var(--menu-tittle-color);
   font-size: 17px;
   text-transform: uppercase;
-  padding: 2.8vh 1.5vh;
   transition-duration: 0.25s;
-}
-
-/* ANIMAÇÃO DO MENU */
-
-ul li a {
-  bottom: 19px;
-  height: 11vh;
-  display: inline-block;
-  vertical-align: middle;
   transform: perspective(1px) translateZ(0);
-  position: relative;
-  overflow: hidden;
 }
 
-ul li a:before {
+nav ul li a:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -113,9 +105,9 @@ ul li a:before {
   transition-timing-function: ease-out;
 }
 
-ul li a:hover:before,
-ul li a:focus:before,
-ul li a:active:before {
+nav ul li a:hover:before,
+nav ul li a:focus:before,
+nav ul li a:active:before {
   left: 0;
   right: 0;
 }
@@ -124,8 +116,7 @@ ul li a:active:before {
   color: var(--menu-tittle-color);
   line-height: 8vh;
   font-size: 30px;
-  float: right;
-  margin-right: 40px;
+  margin-inline: 10px;
   cursor: pointer;
   display: none;
 }
@@ -134,28 +125,31 @@ ul li a:active:before {
   display: none;
 }
 
-h1, h2{
+h1,
+h2 {
   font-family: "Press Start 2P", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
 }
 
 section {
-  margin: 40px 80px;
+  margin: 40px 20%;
 }
 
 section h1 {
   color: var(--menu-tittle-color);
   font-size: 40px;
+  line-height: 45px;
   margin-bottom: 15px;
 }
 
-section h2{
-  color: #77ffc0;
+section h2 {
+  word-wrap: break-word;
+  color: var(--menu-tittle-color);
   font-size: 20px;
+  line-height: 30px;
   font-family: "Press Start 2P", Arial, sans-serif;
   margin: 20px 0 10px 0;
-  line-height: 26px;
   transition-duration: 0.3s;
   transition-property: transform;
   transform-origin: 0 100%;
@@ -165,17 +159,17 @@ h2:hover,
 h2:active {
   -webkit-transform: skew(-15deg);
   transform: skew(-15deg);
-} 
+}
 
 section p {
   color: var(--p-color);
   font-size: 20px;
-  text-align: justify;
+  text-align: left;
   line-height: 26px;
   margin-bottom: 15px;
 }
 
-button#phishingBtn{
+button#phishingBtn {
   cursor: pointer;
   background: transparent;
   color: var(--menu-tittle-color);
@@ -183,27 +177,32 @@ button#phishingBtn{
   font-weight: bold;
   padding: 10px;
   border: 1px solid var(--menu-tittle-color);
-  box-shadow: 0 0 5px var(--menu-tittle-color), 0 0 5px var(--menu-tittle-color) inset;
+  box-shadow: 0 0 5px var(--menu-tittle-color),
+    0 0 5px var(--menu-tittle-color) inset;
   border-radius: 10px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 button#phishingBtn:hover,
-button#phishingBtn:focus{
-  text-shadow:
-  0 0 20px var(--menu-tittle-color),
-  0 0 50px var(--menu-tittle-color),
-  0 0 75px var(--menu-tittle-color);
+button#phishingBtn:focus {
+  text-shadow: 0 0 20px var(--menu-tittle-color),
+    0 0 50px var(--menu-tittle-color), 0 0 75px var(--menu-tittle-color);
 }
 
 ::selection {
   background: var(--selection-color);
 }
 
-@media (max-width: 952px) {
-  label.logo a {
+@media (max-width: 1135px) {
+  section {
+    margin: 40px 15%;
+  }
+}
+
+@media (max-width: 975px) {
+  header label.logo a {
     font-size: 25px;
-    margin: 0 50px;
+    margin-inline: 50px;
   }
 
   nav ul li a {
@@ -211,7 +210,7 @@ button#phishingBtn:focus{
   }
 
   section {
-    margin: 30px 50px;
+    margin: 30px 10%;
   }
 
   section h1 {
@@ -223,7 +222,7 @@ button#phishingBtn:focus{
   }
 }
 
-@media (max-width: 858px) {
+@media (max-width: 910px) {
   .checkbtn {
     display: block;
   }
@@ -233,11 +232,11 @@ button#phishingBtn:focus{
     transition: all 0.8s;
   }
 
-  section {
-    margin: 25px 50px;
+  nav{
+    margin-inline: 5px;
   }
 
-  ul {
+  nav ul {
     z-index: 1;
     position: fixed;
     width: 100%;
@@ -259,12 +258,38 @@ button#phishingBtn:focus{
     font-size: 20px;
   }
 
-
   ul li a {
     height: 8vh;
   }
 
   #check:checked ~ ul {
     left: 0;
+  }
+
+  section {
+    margin: 25px 10%;
+  }
+
+  section h1{
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  header label.logo a {
+    margin-inline: 40px;
+  }
+
+  section {
+    margin: 25px 5%;
+  }
+
+  section h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  section p {
+    font-size: 16px;
   }
 }

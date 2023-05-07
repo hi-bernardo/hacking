@@ -1,0 +1,42 @@
+.members {
+  margin: 25px 0;
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  height: 150px;
+  align-items: center;
+}
+
+.member-profile img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.member-inf {
+  width: 100%;
+  padding: 25px;
+  background: #201b2c;
+  border-radius: 20px;
+}
+
+.member-inf .member-name h2 {
+  font-size: 25px;
+  margin: 5px 0;
+}
+
+.member-inf .member-git {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.member-inf .member-git i{
+  font-size: 20px;
+  color: #fff;
+}
+
+.member-inf .member-git a {
+  text-decoration: underline;
+  font-size: 20px;
+  color: #fff;
+}

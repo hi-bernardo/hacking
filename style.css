@@ -19,6 +19,7 @@
 :root {
   --section-background: #181421;
   --menu-tittle-color: #77ffc0;
+  --nav-color-animation: #55ab83;
   --nav-background: #201b2c;
   --p-color: #fff;
   --selection-color: #3a314e;
@@ -80,15 +81,18 @@ nav ul li {
   margin-inline: 5px;
 }
 
-/* ANIMAÇÃO DO MENU */
-
 nav ul li a {
   position: relative;
+  padding: 10px 0;
   color: var(--menu-tittle-color);
   font-size: 17px;
   text-transform: uppercase;
   transition-duration: 0.25s;
   transform: perspective(1px) translateZ(0);
+}
+
+nav ul:hover li a:not(:hover) {
+  color: var(--nav-color-animation);
 }
 
 nav ul li a:before {
@@ -100,9 +104,22 @@ nav ul li a:before {
   bottom: 0;
   background: var(--menu-tittle-color);
   height: 4px;
+  border-radius: 20px;
   transition-property: left, right;
   transition-duration: 0.25s;
   transition-timing-function: ease-out;
+}
+
+nav ul li a.active::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--menu-tittle-color);
+  height: 4px;
+  border-radius: 20px;
 }
 
 nav ul li a:hover:before,
@@ -176,21 +193,24 @@ button#phishingBtn {
   text-align: center;
   font-weight: bold;
   padding: 10px;
-  border: 1px solid var(--menu-tittle-color);
-  box-shadow: 0 0 5px var(--menu-tittle-color),
-    0 0 5px var(--menu-tittle-color) inset;
+  border: 2px solid var(--menu-tittle-color);
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
 
 button#phishingBtn:hover,
 button#phishingBtn:focus {
-  text-shadow: 0 0 20px var(--menu-tittle-color),
-    0 0 50px var(--menu-tittle-color), 0 0 75px var(--menu-tittle-color);
+  background: var(--menu-tittle-color);
+  color: var(--section-background);
 }
 
 ::selection {
   background: var(--selection-color);
+}
+
+.tittle,
+.content {
+  visibility: hidden;
 }
 
 @media (max-width: 1135px) {
@@ -232,7 +252,7 @@ button#phishingBtn:focus {
     transition: all 0.8s;
   }
 
-  nav{
+  nav {
     margin-inline: 5px;
   }
 
@@ -270,7 +290,7 @@ button#phishingBtn:focus {
     margin: 25px 10%;
   }
 
-  section h1{
+  section h1 {
     line-height: 40px;
   }
 }

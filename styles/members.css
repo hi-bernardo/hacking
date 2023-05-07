@@ -1,98 +1,42 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-}
-
-body {
-  font-family: "Ubuntu", Arial, sans-serif;
-  background: #181421;
-}
-
-#check {
-  display: none;
-}
-
-table {
-  margin: 4vh 0;
+.members {
+  margin: 25px 0;
+  display: flex;
+  gap: 25px;
   width: 100%;
+  height: 150px;
+  align-items: center;
 }
 
-td {
-  border: 4px solid #77ffc0;
-  border-radius: 50px;
+.member-profile img {
+  width: 150px;
+  border-radius: 50%;
 }
 
-tr {
-  background-color: #0e0b13;
+.member-inf {
+  width: 100%;
+  padding: 25px;
+  background: #201b2c;
+  border-radius: 20px;
 }
 
-.img {
-  border-radius: 100%;
-  width: 160px;
+.member-inf .member-name h2 {
+  font-size: 25px;
+  margin: 5px 0;
 }
 
-.img img {
-  width: 160px;
-  border-radius: 100%;
+.member-inf .member-git {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-.name {
-  padding: 0px 5px;
-  font-size: 23px;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: "Press Start 2P", Arial, sans-serif;
-  line-height: 25px;
-}
-
-.sub {
+.member-inf .member-git i{
   font-size: 20px;
-  color: #77ffc0;
-  letter-spacing: 2px;
-  font-weight: lighter;
-  text-align: center;
+  color: #fff;
 }
 
-@media (max-width: 952px) {
-  .img {
-    border-radius: 100%;
-    width: 140px;
-  }
-
-  .img img {
-    width: 140px;
-    border-radius: 100%;
-  }
-}
-
-@media (max-width: 858px) {
-  .img {
-    border-radius: 50%;
-    width: 140px;
-  }
-
-  .img img {
-    width: 140px;
-    border-radius: 100%;
-  }
-
-  td.name {
-    text-align: center;
-    font-size: 19px;
-    line-height: 25px;
-    padding: 1vh;
-  }
-
-  .sub {
-    font-size: 15px;
-    color: #77ffc0;
-    letter-spacing: 2px;
-    font-weight: lighter;
-    text-align: center;
-    line-height: 21px;
-  }
+.member-inf .member-git a {
+  text-decoration: underline;
+  font-size: 20px;
+  color: #fff;
 }

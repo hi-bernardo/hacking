@@ -30,7 +30,7 @@
   gap: 5px;
 }
 
-.member-inf .member-git i{
+.member-inf .member-git i {
   font-size: 20px;
   color: #fff;
 }
@@ -39,4 +39,54 @@
   text-decoration: underline;
   font-size: 20px;
   color: #fff;
+}
+
+@media (max-width: 550px) {
+  .members {
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  .member-inf .member-name h2 {
+    font-size: 20px;
+  }
+
+  .member-inf .member-git i {
+    font-size: 18px;
+  }
+
+  .member-inf .member-git a {
+    font-size: 18px;
+  }
+
+  .member-profile img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 375px){
+  .members {
+    gap: 5px;
+    margin: 20px 0;
+  }
+
+  .member-inf .member-name h2 {
+    font-size: 18px;
+  }
+
+  .member-inf .member-git i {
+    font-size: 16px;
+  }
+
+  .member-inf .member-git a {
+    font-size: 16px;
+  }
+
+  .member-inf {
+    padding: 15px;
+    background: #201b2c;
+    border-radius: 20px;
+  }
+
+
 }

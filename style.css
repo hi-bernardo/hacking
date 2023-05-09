@@ -136,6 +136,7 @@ nav ul li a:active:before {
   margin-inline: 10px;
   cursor: pointer;
   display: none;
+  transition: ease-in-out .3s;
 }
 
 #check {
@@ -249,7 +250,6 @@ button#phishingBtn:focus {
 
   .checkbtn:hover {
     color: var(--p-color);
-    transition: all 0.8s;
   }
 
   nav {
